@@ -1,0 +1,29 @@
+Building a Temperature-Controlled Fan using Arduino, a temperature sensor, a relay module, and a DC fan.
+
+Components Required
+
+	1.	Arduino UNO or any compatible board.
+	2.	DHT11/DHT22 Temperature and Humidity Sensor (DHT22 is more accurate).
+	3.	Relay Module (5V) – to control the fan.
+	4.	DC Fan (or any small 5V fan).
+	5.	Jumper wires.
+	6.	Breadboard.
+	7.	Power supply (for the fan, depending on its voltage).
+	8.	Diode (1N4007) – optional, to protect against voltage spikes from the fan.
+	9.	Resistor (10kΩ) – optional, for DHT sensor stability.
+
+Wiring the Components
+
+	1.	DHT11/DHT22 Sensor Connections:
+	•	VCC → 5V on Arduino.
+	•	GND → GND on Arduino.
+	•	Data Pin → Pin 2 on Arduino.
+(If using DHT22, you may need a 10kΩ pull-up resistor between the data pin and 5V to stabilize the signal.)
+	2.	Relay Module Connections:
+	•	VCC → 5V on Arduino.
+	•	GND → GND on Arduino.
+	•	IN (control pin) → Pin 7 on Arduino.
+	3.	Fan (DC Motor) Connections:
+	•	The positive wire of the fan connects to the NO (Normally Open) pin of the relay module.
+	•	The negative wire of the fan connects to the GND or negative terminal of the power supply.
+	•	The common pin (COM) of the relay module connects to the positive terminal of the fan’s power supply (or the Arduino’s 5V if the fan is low-powered).
